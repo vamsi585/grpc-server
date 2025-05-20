@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: grpcservice-internal-api
+  description: Internal gRPC API endpoints exposed by grpcservice
+spec:
+  type: grpc
+  lifecycle: experimental
+  owner: your-team-name
+  definition: |
+    syntax = "proto3";
+
+    package com.example.proto;
+
+    service Greeter {
+      rpc SayHello (HelloRequest) returns (HelloReply);
+    }
+
+    message HelloRequest {
+      string name = 1;
+    }
+
+    message HelloReply {
+      string message = 1;
+    }
