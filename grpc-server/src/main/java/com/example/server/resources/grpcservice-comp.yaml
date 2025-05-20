@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: grpcservice
+  description: gRPC Greeter Service that implements greeting API
+  tags:
+    - grpc
+    - java
+    - service
+spec:
+  type: service
+  owner: your-team-name
+  lifecycle: experimental
+  system: greeting-system
+  consumesApis:
+    - greeting-grpc-api
+  providesApis:
+    - grpcservice-internal-api
