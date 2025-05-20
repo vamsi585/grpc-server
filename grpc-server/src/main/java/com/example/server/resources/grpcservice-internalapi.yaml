@@ -7,19 +7,5 @@ spec:
   type: grpc
   lifecycle: experimental
   owner: your-team-name
-  definition: |
-    syntax = "proto3";
-
-    package com.example.proto;
-
-    service Greeter {
-      rpc SayHello (HelloRequest) returns (HelloReply);
-    }
-
-    message HelloRequest {
-      string name = 1;
-    }
-
-    message HelloReply {
-      string message = 1;
-    }
+  definition:
+        $text:https://github.com/vamsi585/proto/blob/main/src/main/java/proto/greeting.proto
