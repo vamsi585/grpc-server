@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: grpcservice
   description: gRPC Greeter Service that implements greeting API
+  annotations:
+    backstage.io/techdocs-ref: docs/
   tags:
     - grpc
     - java
